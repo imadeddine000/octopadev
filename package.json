@@ -1,0 +1,36 @@
+{
+  "name": "octopadev",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-provider launcher for Claude Code terminal client with support for Anthropic, Gemini, Groq, Ollama, and Deepseek.",
+  "main": "dist/proxy.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/proxy.js",
+    "octopadev": "node src/launcher.js",
+    "proxy": "tsx src/proxy.ts",
+    "proxy:compat": "tsx src/proxy.ts",
+    "proxy:gemini": "tsx src/proxy.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.58.0",
+    "@google/genai": "^1.29.0",
+    "dotenv": "^17.2.3",
+    "ink": "^6.8.0",
+    "ink-text-input": "^6.0.0",
+    "picocolors": "^1.1.1",
+    "react": "^19.2.4",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.2.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
